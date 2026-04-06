@@ -12,7 +12,7 @@ APPLICATIONS = {
         "service_name": "famvest-app",
         "deploy_path": BASE_DEPLOY_DIR / "famvest",
         "symlink": "famvest.jar",
-        "application_url": "https://trade.famvest.online"
+        "application_url": "https://famvest.upvaly.com"
     },
     "netly": {
         "git_url": "git@github.com/yogeshsonawane-dev/netly.git",
@@ -22,7 +22,7 @@ APPLICATIONS = {
         "service_name": "netly-app",
         "deploy_path": BASE_DEPLOY_DIR / "netly",
         "symlink": "netly.jar",
-        "application_url": "https://netly.famvest.online"
+        "application_url": "https://netly.upvaly.com"
     },
     "duebook": {
         "git_url": "git@github.com/yogeshsonawane-dev/duebook.git",
@@ -42,7 +42,7 @@ APPLICATIONS = {
         "service_name": "finapi-app",
         "deploy_path": BASE_DEPLOY_DIR / "finapi",
         "symlink": "finapi.jar",
-        "application_url": "https://finapi.famvest.online"
+        "application_url": "https://finapi.upvaly.com"
     }
 }
 
