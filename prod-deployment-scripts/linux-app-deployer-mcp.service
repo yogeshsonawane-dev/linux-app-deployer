@@ -7,7 +7,6 @@ Requires=nginx.service
 Type=simple
 User=root
 WorkingDirectory=/opt/mcp/linux-app-deployer
-
 ExecStart=/opt/mcp/linux-app-deployer/venv/bin/python server.py
 
 Restart=always
