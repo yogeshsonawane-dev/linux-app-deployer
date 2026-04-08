@@ -8,10 +8,7 @@ Type=simple
 User=root
 WorkingDirectory=/opt/mcp/linux-app-deployer
 
-Environment=PYTHONUNBUFFERED=1
-Environment=UV_CACHE_DIR=/opt/mcp/linux-app-deployer/.uv-cache
-
-ExecStart=/opt/mcp/linux-app-deployer/.venv/bin/python server.py
+ExecStart=/opt/mcp/linux-app-deployer/venv/bin/python server.py
 
 Restart=always
 RestartSec=5
