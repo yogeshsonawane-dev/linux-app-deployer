@@ -174,7 +174,7 @@ Configure Nginx as a reverse proxy with SSL/TLS encryption to securely expose th
 
 Before setting up SSL, ensure your domain resolves correctly:
 ```bash
-dig mcp.famvest.online +short
+dig mcp.adminhub.upvaly.com +short
 ```
 
 #### 3.2 Install and Configure Certbot
@@ -201,7 +201,7 @@ sudo systemctl reload nginx
 
 Obtain an SSL certificate for your domain using Certbot:
 ```bash
-sudo certbot --nginx -d mcp.famvest.online
+sudo certbot --nginx -d mcp.adminhub.upvaly.com
 ```
 
 Follow the interactive prompts to configure automatic renewal and other options.
@@ -223,14 +223,14 @@ map $http_x_api_key $mcp_api_key_valid {
 Copy the provided Nginx configuration file:
 ```bash
 cd /etc/nginx/sites-available
-sudo cp /opt/mcp/linux-app-deployer/prod-deployment-scripts/mcp.famvest.online .
+sudo cp /opt/mcp/linux-app-deployer/prod-deployment-scripts/mcp.adminhub.upvaly.com .
 ```
 
 Enable the site by setting up symlinks and removing defaults:
 ```bash
 cd /etc/nginx/sites-enabled
 sudo rm -f default
-sudo ln -sf /etc/nginx/sites-available/mcp.famvest.online mcp.famvest.online
+sudo ln -sf /etc/nginx/sites-available/mcp.adminhub.upvaly.com mcp.adminhub.upvaly.com
 ```
 
 #### 3.6 Final Nginx Validation
@@ -400,7 +400,7 @@ This section explains how to configure the Linux Deployer MCP Server with Cursor
          "command": "npx",
          "args": [
            "mcp-remote",
-           "https://mcp.famvest.online/mcp",
+           "https://mcp.adminhub.upvaly.com/mcp",
            "--header",
            "X-API-Key: your-secret-api-key-here"
          ]
@@ -442,7 +442,7 @@ This section explains how to configure the Linux Deployer MCP Server with Cursor
          "command": "npx",
          "args": [
            "mcp-remote",
-           "https://mcp.famvest.online/mcp",
+           "https://mcp.adminhub.upvaly.com/mcp",
            "--header",
            "X-API-Key: your-secret-api-key-here"
          ]
@@ -469,7 +469,7 @@ To use the API key with Cursor or Claude Desktop:
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://mcp.famvest.online/mcp",
+        "https://mcp.adminhub.upvaly.com/mcp",
         "--header",
         "X-API-Key: your-secret-api-key-here"
       ]
