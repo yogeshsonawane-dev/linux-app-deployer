@@ -57,7 +57,7 @@ APPLICATIONS = {
         "deploy_path": BASE_DEPLOY_DIR / "admin-hub",
         "symlink": "admin-hub.jar",
         "application_url": "https://adminhub.upvaly.com",
-        "api_health_end_point": "https://adminhub.upvaly.com/health"
+        "api_health_end_point": "https://adminhub.upvaly.com/api/public/health"
     }
 
 }
