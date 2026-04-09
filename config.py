@@ -12,7 +12,8 @@ APPLICATIONS = {
         "service_name": "famvest-app",
         "deploy_path": BASE_DEPLOY_DIR / "famvest",
         "symlink": "famvest.jar",
-        "application_url": "https://famvest.upvaly.com"
+        "application_url": "https://famvest.upvaly.com",
+        "api_url": "https://api.famvest.upvaly.com"
     },
     "netly": {
         "git_url": "git@github.com/yogeshsonawane-dev/netly.git",
@@ -22,7 +23,8 @@ APPLICATIONS = {
         "service_name": "netly-app",
         "deploy_path": BASE_DEPLOY_DIR / "netly",
         "symlink": "netly.jar",
-        "application_url": "https://netly.upvaly.com"
+        "application_url": "https://netly.upvaly.com",
+        "api_health_end_point": "https://api.netly.upvaly.com/health"
     },
     "duebook": {
         "git_url": "git@github.com/yogeshsonawane-dev/duebook.git",
@@ -32,7 +34,8 @@ APPLICATIONS = {
         "service_name": "duebook-app",
         "deploy_path": BASE_DEPLOY_DIR / "duebook",
         "symlink": "duebook.jar",
-        "application_url": "https://duebook.famvest.online"
+        "application_url": "https://duebook.upvaly.online",
+        "api_health_end_point": "https://duebook.upvaly.com"
     },
     "finapi": {
         "git_url": "git@github.com/yogeshsonawane-dev/finapi.git",
@@ -42,18 +45,20 @@ APPLICATIONS = {
         "service_name": "finapi-app",
         "deploy_path": BASE_DEPLOY_DIR / "finapi",
         "symlink": "finapi.jar",
-        "application_url": "https://finapi.upvaly.com"
+        "application_url": "https://finapi.upvaly.com",
+        "api_health_end_point": "https://api.finapi.upvaly.com"
     },
     "adminhub": {
-            "git_url": "git@github.com/yogeshsonawane-dev/admin-hub.git",
-            "branch": "main",
-            "build_type": "maven",
-            "artifact_path": "target/admin-hub-*.jar",
-            "service_name": "adminhub-app",
-            "deploy_path": BASE_DEPLOY_DIR / "admin-hub",
-            "symlink": "admin-hub.jar",
-            "application_url": "https://adminhub.upvaly.com"
-        }
+        "git_url": "git@github.com/yogeshsonawane-dev/admin-hub.git",
+        "branch": "main",
+        "build_type": "maven",
+        "artifact_path": "target/admin-hub-*.jar",
+        "service_name": "adminhub-app",
+        "deploy_path": BASE_DEPLOY_DIR / "admin-hub",
+        "symlink": "admin-hub.jar",
+        "application_url": "https://adminhub.upvaly.com",
+        "api_health_end_point": "https://adminhub.upvaly.com"
+    }
 
 }
 
