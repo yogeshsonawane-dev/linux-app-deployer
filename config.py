@@ -43,10 +43,21 @@ APPLICATIONS = {
         "deploy_path": BASE_DEPLOY_DIR / "finapi",
         "symlink": "finapi.jar",
         "application_url": "https://finapi.upvaly.com"
-    }
+    },
+    "adminhub": {
+            "git_url": "git@github.com/yogeshsonawane-dev/admin-hub.git",
+            "branch": "main",
+            "build_type": "maven",
+            "artifact_path": "target/admin-hub-*.jar",
+            "service_name": "adminhub-app",
+            "deploy_path": BASE_DEPLOY_DIR / "admin-hub",
+            "symlink": "admin-hub.jar",
+            "application_url": "https://adminhub.upvaly.com"
+        }
+
 }
 
-ALLOWED_SERVICES = {"famvest-app", "netly-app", "duebook-app", "finapi-app"}
+ALLOWED_SERVICES = {"famvest-app", "netly-app", "duebook-app", "finapi-app", "adminhub-app"}
 
 BUILD_COMMANDS = {
     "maven": ["mvn", "clean", "package", "-DskipTests"]
