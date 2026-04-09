@@ -13,7 +13,7 @@ APPLICATIONS = {
         "deploy_path": BASE_DEPLOY_DIR / "famvest",
         "symlink": "famvest.jar",
         "application_url": "https://famvest.upvaly.com",
-        "api_health_end_point": "https://api.famvest.upvaly.com/api/public/health"
+        "api_health_end_point": "https://famvest.upvaly.com/rest/public/health"
     },
     "netly": {
         "git_url": "git@github.com:yogeshsonawane-dev/netly.git",
