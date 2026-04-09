@@ -1,5 +1,5 @@
 [Unit]
-Description=Linux Application Deployer MCP Server
+Description=Linux Application Deployer (API + MCP Server)
 After=network.target nginx.service
 Requires=nginx.service
 
@@ -7,7 +7,7 @@ Requires=nginx.service
 Type=simple
 User=root
 WorkingDirectory=/opt/mcp/linux-app-deployer
-ExecStart=/opt/mcp/linux-app-deployer/venv/bin/python server.py
+ExecStart=/opt/mcp/linux-app-deployer/start.sh
 
 Restart=always
 RestartSec=5

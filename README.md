@@ -305,8 +305,7 @@ Set up the MCP server as a systemd service for automatic startup and monitoring.
 
 Copy the systemd service configuration:
 ```bash
-sudo cp /opt/mcp/linux-app-deployer/prod-deployment-scripts/linux-app-deployer-mcp.service /etc/systemd/system/
-sudo cp /opt/mcp/linux-app-deployer/prod-deployment-scripts/linux-app-deployer-api.service /etc/systemd/system/
+sudo cp /opt/mcp/linux-app-deployer/prod-deployment-scripts/linux-app-deployer.service /etc/systemd/system/
 
 ```
 
@@ -319,14 +318,12 @@ sudo systemctl daemon-reload
 
 Enable the service to start automatically on boot:
 ```bash
-sudo systemctl enable linux-app-deployer-mcp.service
-sudo systemctl enable linux-app-deployer-api.service
+sudo systemctl enable linux-app-deployer.service
 ```
 
 Start the service:
 ```bash
-sudo systemctl restart linux-app-deployer-mcp.service
-sudo systemctl restart linux-app-deployer-api.service
+sudo systemctl restart linux-app-deployer.service
 
 ```
 
@@ -334,22 +331,19 @@ sudo systemctl restart linux-app-deployer-api.service
 
 Check the current status of the service:
 ```bash
-sudo systemctl status linux-app-deployer-mcp.service
-sudo systemctl status linux-app-deployer-api.service
+sudo systemctl status linux-app-deployer.service
 
 ```
 
 View recent logs:
 ```bash
-sudo journalctl -u linux-app-deployer-mcp.service -n 50 --no-pager
-sudo journalctl -u linux-app-deployer-api.service -n 50 --no-pager
+sudo journalctl -u linux-app-deployer.service -n 50 --no-pager
 
 ```
 
 Follow logs in real-time:
 ```bash
-sudo journalctl -u linux-app-deployer-mcp.service -f
-sudo journalctl -u linux-app-deployer-api.service -f
+sudo journalctl -u linux-app-deployer.service -f
 
 ```
 ---
@@ -373,8 +367,7 @@ For ongoing maintenance, update the application periodically:
 cd /opt/mcp/linux-app-deployer
 git pull
 uv pip install -r requirements.txt
-sudo systemctl restart linux-app-deployer-mcp.service
-sudo systemctl restart linux-app-deployer-api.service
+sudo systemctl restart linux-app-deployer.service
 
 ```
 
@@ -501,14 +494,14 @@ If the MCP server connection is not established:
 1. **Check MCP Server Status**:
    - On the production server, verify the service is running:
      ```bash
-     sudo systemctl status linux-app-deployer-mcp.service
+     sudo systemctl status linux-app-deployer.service
      ```
 
 2.**Review Logs**:
    - Check Claude Desktop or Cursor logs for connection errors
    - Review the MCP server logs on the remote machine:
      ```bash
-     sudo journalctl -u linux-app-deployer-mcp.service -f
+     sudo journalctl -u linux-app-deployer.service -f
      ```
 
 3.**Verify Configuration Syntax**:
