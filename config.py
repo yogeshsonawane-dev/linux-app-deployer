@@ -24,7 +24,7 @@ APPLICATIONS = {
         "deploy_path": BASE_DEPLOY_DIR / "netly",
         "symlink": "netly.jar",
         "application_url": "https://netly.upvaly.com",
-        "api_health_end_point": "https://api.netly.upvaly.com/health"
+        "api_health_end_point": "https://api.netly.upvaly.com/api/public/health"
     },
     "duebook": {
         "git_url": "git@github.com/yogeshsonawane-dev/duebook.git",
