@@ -5,7 +5,7 @@ BASE_DEPLOY_DIR = Path("/opt/app")
 
 APPLICATIONS = {
     "famvest": {
-        "git_url": "git@github.com/yogeshsonawane-dev/famvest.git",
+        "git_url": "git@github.com:yogeshsonawane-dev/famvest.git",
         "branch": "main",
         "build_type": "maven",
         "artifact_path": "target/famvest-*.jar",
@@ -16,7 +16,7 @@ APPLICATIONS = {
         "api_health_end_point": "https://api.famvest.upvaly.com/health"
     },
     "netly": {
-        "git_url": "git@github.com/yogeshsonawane-dev/netly.git",
+        "git_url": "git@github.com:yogeshsonawane-dev/netly.git",
         "branch": "main",
         "build_type": "maven",
         "artifact_path": "target/netly-*.jar",
@@ -27,7 +27,7 @@ APPLICATIONS = {
         "api_health_end_point": "https://api.netly.upvaly.com/api/public/health"
     },
     "duebook": {
-        "git_url": "git@github.com/yogeshsonawane-dev/duebook.git",
+        "git_url": "git@github.com:yogeshsonawane-dev/duebook.git",
         "branch": "main",
         "build_type": "maven",
         "artifact_path": "target/duebook-*.jar",
@@ -38,7 +38,7 @@ APPLICATIONS = {
         "api_health_end_point": "https://duebook.upvaly.com/health"
     },
     "finapi": {
-        "git_url": "git@github.com/yogeshsonawane-dev/finapi.git",
+        "git_url": "git@github.com:yogeshsonawane-dev/finapi.git",
         "branch": "main",
         "build_type": "maven",
         "artifact_path": "target/finapi-*.jar",
