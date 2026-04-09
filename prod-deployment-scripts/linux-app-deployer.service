@@ -7,7 +7,7 @@ Requires=nginx.service
 Type=simple
 User=root
 WorkingDirectory=/opt/mcp/linux-app-deployer
-ExecStart=/opt/mcp/linux-app-deployer/start.sh
+ExecStart=/opt/mcp/linux-app-deployer/prod-deployment-scripts/start.sh
 
 Restart=always
 RestartSec=5
