@@ -13,7 +13,7 @@ APPLICATIONS = {
         "deploy_path": BASE_DEPLOY_DIR / "famvest",
         "symlink": "famvest.jar",
         "application_url": "https://famvest.upvaly.com",
-        "api_url": "https://api.famvest.upvaly.com"
+        "api_url": "https://api.famvest.upvaly.com/health"
     },
     "netly": {
         "git_url": "git@github.com/yogeshsonawane-dev/netly.git",
@@ -35,7 +35,7 @@ APPLICATIONS = {
         "deploy_path": BASE_DEPLOY_DIR / "duebook",
         "symlink": "duebook.jar",
         "application_url": "https://duebook.upvaly.online",
-        "api_health_end_point": "https://duebook.upvaly.com"
+        "api_health_end_point": "https://duebook.upvaly.com/health"
     },
     "finapi": {
         "git_url": "git@github.com/yogeshsonawane-dev/finapi.git",
@@ -46,7 +46,7 @@ APPLICATIONS = {
         "deploy_path": BASE_DEPLOY_DIR / "finapi",
         "symlink": "finapi.jar",
         "application_url": "https://finapi.upvaly.com",
-        "api_health_end_point": "https://api.finapi.upvaly.com"
+        "api_health_end_point": "https://api.finapi.upvaly.com/health"
     },
     "adminhub": {
         "git_url": "git@github.com/yogeshsonawane-dev/admin-hub.git",
@@ -57,7 +57,7 @@ APPLICATIONS = {
         "deploy_path": BASE_DEPLOY_DIR / "admin-hub",
         "symlink": "admin-hub.jar",
         "application_url": "https://adminhub.upvaly.com",
-        "api_health_end_point": "https://adminhub.upvaly.com"
+        "api_health_end_point": "https://adminhub.upvaly.com/health"
     }
 
 }
