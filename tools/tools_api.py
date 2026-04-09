@@ -109,6 +109,15 @@ def build_application(application_name: str) -> dict:
         raise ValueError("Repository not allowed")
 
     app_cfg = APPLICATIONS[application_name]
+
+    # Skip build if build_type is N/A
+    if app_cfg["build_type"] == "N/A":
+        logger.info(
+            "Build skipped: application build_type is N/A",
+            extra={"extra_fields": {"application_name": application_name}}
+        )
+        return {"success": True, "skipped": True, "reason": "build_type is N/A"}
+
     repo_path = BASE_REPO_DIR / application_name
     cmd = BUILD_COMMANDS[app_cfg["build_type"]]
 
@@ -127,6 +136,15 @@ def verify_artifact(application_name: str) -> dict:
     )
 
     require_application(application_name)
+
+    # Skip verification if artifact_path is N/A
+    app_cfg = APPLICATIONS[application_name]
+    if app_cfg["artifact_path"] == "N/A":
+        logger.info(
+            "Artifact verification skipped: artifact_path is N/A",
+            extra={"extra_fields": {"application_name": application_name}}
+        )
+        return {"success": True, "skipped": True, "reason": "artifact_path is N/A"}
 
     try:
         artifact = get_artifact_file(application_name)
@@ -149,6 +167,15 @@ def deploy_artifact(application_name: str) -> dict:
         require_application(application_name)
 
         app_cfg = APPLICATIONS[application_name]
+
+        # Skip deployment if deploy_path or artifact_path is N/A
+        if app_cfg["deploy_path"] == "N/A" or app_cfg["artifact_path"] == "N/A":
+            logger.info(
+                "Artifact deployment skipped: deploy_path or artifact_path is N/A",
+                extra={"extra_fields": {"application_name": application_name}}
+            )
+            return {"success": True, "skipped": True, "reason": "deploy_path or artifact_path is N/A"}
+
         try:
             artifact = get_artifact_file(application_name)
         except ValueError as e:
@@ -182,7 +209,7 @@ def deploy_artifact(application_name: str) -> dict:
         shutil.copy2(artifact, target)
 
         # Manage symlink if configured
-        if "symlink" in app_cfg:
+        if "symlink" in app_cfg and app_cfg["symlink"] != "N/A":
             symlink_path = deploy_dir / app_cfg["symlink"]
             if symlink_path.exists() or symlink_path.is_symlink():
                 symlink_path.unlink()

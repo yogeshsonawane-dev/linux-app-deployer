@@ -58,11 +58,22 @@ APPLICATIONS = {
         "symlink": "admin-hub.jar",
         "application_url": "https://adminhub.upvaly.com",
         "api_health_end_point": "https://adminhub.upvaly.com/api/public/health"
-    }
+    },
+    "linux-app-deployer": {
+        "git_url": "git@github.com:yogeshsonawane-dev/linux-app-deployer.git",
+        "branch": "main",
+        "build_type": "N/A",
+        "artifact_path": "N/A",
+        "service_name": "linux-app-deployer",
+        "deploy_path": "N/A",
+        "symlink": "N/A",
+        "application_url": "https://mcp.adminhub.upvaly.com/health",
+        "api_health_end_point": "https://mcp.adminhub.upvaly.com/health"
+    },
 
 }
 
-ALLOWED_SERVICES = {"famvest-app", "netly-app", "duebook-app", "finapi-app", "adminhub-app"}
+ALLOWED_SERVICES = {"famvest-app", "netly-app", "duebook-app", "finapi-app", "adminhub-app", "linux-app-deployer"}
 
 BUILD_COMMANDS = {
     "maven": ["mvn", "clean", "package", "-DskipTests"]
