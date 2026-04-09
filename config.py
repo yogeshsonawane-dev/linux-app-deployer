@@ -49,7 +49,7 @@ APPLICATIONS = {
         "api_health_end_point": "https://api.finapi.upvaly.com/api/public/health"
     },
     "adminhub": {
-        "git_url": "git@github.com/yogeshsonawane-dev/admin-hub.git",
+        "git_url": "git@github.com:yogeshsonawane-dev/admin-hub.git",
         "branch": "main",
         "build_type": "maven",
         "artifact_path": "target/admin-hub-*.jar",
